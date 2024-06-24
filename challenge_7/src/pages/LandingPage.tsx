@@ -1,29 +1,31 @@
-// App.tsx
-import React from 'react';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import OurServices from '../components/OurServices';
-import WhyUs from '../components/WhyUs';
-import Testimonial from '../components/Testimonial';
-import Banner from '../components/Banner';
-import FAQ from '../components/FAQ';
-import Footer from '../components/Footer';
+import Banner from "../components/elements/Banner/Banner";
+import FAQ from "../components/elements/FAQ/FAQ";
+import Footer from "../components/elements/Footer/Footer";
+import Hero from "../components/elements/Hero/Hero";
+import Navbar from "../components/elements/Navbar/Navbar";
+import OurServices from "../components/elements/OurServices/OurServices";
+import Testimonial from "../components/elements/Testimonial/Testimonial";
+import WhyUs from "../components/elements/WhyUs/WhyUs";
 
-const App: React.FC = () => {
+const LandingPage = () => {
   return (
-    <div>
-      <Header />
-      <main>
+    <>
+      <header style={{ backgroundColor: "#f1f3ff", padding: "0" }}>
+        <Navbar />
         <Hero />
+      </header>
+      <main>
         <OurServices />
         <WhyUs />
         <Testimonial />
         <Banner />
         <FAQ />
       </main>
-      <Footer />
-    </div>
+      <footer className="container d-flex">
+        <Footer />
+      </footer>
+    </>
   );
 };
 
-export default App;
+export default LandingPage;

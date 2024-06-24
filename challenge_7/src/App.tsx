@@ -1,23 +1,13 @@
-//import { useState } from 'react'
-import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
-import Cars from './pages/Cars'
-import LandingPage from './pages/LandingPage'
+import { ToastContainer } from "react-toastify";
+import RootRoutes from "./routes";
 
 function App() {
-  
   return (
-   <Router>
-    <Routes>
-    <Route path='/' element={<LandingPage/>}/>
-      <Route path='/Login' element={<Login/>}/>
-      <Route path='/Dashboard' element={<Dashboard/>}/>
-      <Route path='/Cars' element={<Cars/>}/>
-    </Routes>
-   </Router>
-  )
+    <>
+      <RootRoutes />
+      <ToastContainer />
+    </>
+  );
 }
 
-export default App
+export default App;
